@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8"/>
+	<title>Tudo sobre Google Glass </title>
+	<link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
+	<link rel="stylesheet" type="text/css" href="_css/specs.css"/>
+	<script language="javascript" src="_javascript/funcoes.js"></script>
+</head>
+<body>
+	<div id="interface">
+		<header id="cabecalho">
+				<hgroupe>
+					<h1>Google Glass</h1>
+					<h2>A revolução do Google está chegando</h2>
+				</hgroupe>
+				<img id="icone" src="_imagens/especificacoes.png"/>
+				<nav id="menu">
+					<h1>Menu Principal</h1>
+					<ul type="disc">	<!--   Menu -->
+						<li onmousemove="mudaIcone('home')" onmouseout="mudaIcone('especificacoes')">
+						<a href="index.html">Home</a></li>
+						<li onmousemove="mudaIcone('especificacoes')" onmouseout="mudaIcone('especificacoes')">
+						<a href="specs.html">Especificações</a></li>
+						<li onmousemove="mudaIcone('fotos')" onmouseout="mudaIcone('especificacoes')">
+						<a href="fotos.html">Fotos</a></li>
+						<li onmousemove="mudaIcone('multimidia')" onmouseout="mudaIcone('especificacoes')">
+						<a href="multimidia.html">Multimídia</a></li>
+						<li onmousemove="mudaIcone('contato')" onmouseout="mudaIcone('especificacoes')">
+						<a href="fale-conosco.html">Fale conosco</a></li>
+					</ul>	
+				</nav>
+		</header>
+				<!-- -------------------------- Fim Cabeçalho -------------------------------------- -->
+		<section id="corpo-full">
+			<article id="noticia-principal">
+				<header id="cabArtigo">
+					<hgroup>
+						<h3>Glass > Especificações</h3>
+						<h1>Raio X no Google Glass</h1>
+						<h2 class="scx">por Christian de Toledo</h2>
+						<h3 class="direita">Atualizado em 20/Janeiro/2021</h3>	
+					</hgroup>
+				</header>	
+		<!-- ------------------------------------- Recorte Corpo cabecalho ------------------------------------ -->		
+
+				<p>Clique em qualquer área destacada da imagem para ter mais informações sobre os recursos do Google Glass. Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações.</p>	
+				<section id="conteudo">
+					<img src="_imagens/glass-esquema-marcado.jpg" usemap="#mapGlass"/>
+					<map name="mapGlass">
+						<area shape="poly" coords="183,219,266,207,266,243,185,256" href="google-glass.html#tela" target="janela"/>
+						<area shape="circle" coords="158,243,12" href="google-glass.html#camera" target="janela"/>
+						<area shape="circle" coords="76,51,11" href="google-glass.html#bateria" target="janela"/>
+						<area shape="poly" coords="26,143,82,217,83,252,26,167" href="google-glass.html#sensores" target="janela"/>
+						<area shape="rec" coords="-5,-5,600,400" href="google-glass.html#topo" target="janela"/>
+					</map>
+					<iframe scrolling="no" src="google-glass.html" name="janela" id="frame-spec"></iframe>
+				</section>
+			</article>
+		</section>
+	<!-- ----------------------------------------- Roda pé Recorte --------------------------------------------- -->
+		<footer id="rodape">
+			<nav id="link">	
+				<p>Copyright 2021 - by Christian de Toledo &copy; <br/>
+				<a href="https://www.facebook.com/christian.louzadodossantosdetoledo" target="blanc">Facebook</a> | 
+				<a href="https://wa.me/message/TDYGTHAI6Y7TD1" target="blanc">WhatsApp</a></p>
+			</nav>	
+		</footer>
+	</div>
+</body>
+</html>

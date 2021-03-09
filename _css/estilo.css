@@ -1,0 +1,264 @@
+@charset="UTF-8";
+
+@font-face{
+	font-family: fonteLogo;
+	src: url(../_fonts/bubblegum-sans-regular.otf);
+}
+
+@import url ('https://fonts.googleapis.com/css2? family = Titillium + Web: wght @ 300 & display = swap');
+@import url ('https://fonts.googleapis.com/css2? family = Bubblegum + Sans & display = swap');
+
+body{
+	background-color: #dddddd;
+	color: rgba(0,0,0,1);
+	font-family: arial;
+}
+
+div#interface{
+	width: 938px;
+	background-color: #ffffff;
+		/* Super- Esq- inf - dir*/
+	margin: -20px auto 0px auto;
+	box-shadow: 0px 0px 10px black;
+	padding: 10px;
+}
+
+header#cabecalho {
+	border-bottom: 1px solid #606060;
+	height: 150px;
+	background: url("../_imagens/glass-logo-peq.jpg")no-repeat 0px 80px;
+}
+header#cabecalho h1{
+	margin-bottom:0px;
+	padding: 0px;
+	color: #606060;
+	text-shadow: 1px 1px 1px rgba(0,0,0,.6);
+	font-size: 30pt;
+	font-family: fonteLogo, sans-serif;
+}
+
+header#cabecalho h2{
+	margin-top: 0px;
+	padding: 0px;
+	color: #888888;
+	font-size: 15pt;
+	font-family: 'Titillium Web', sans-serif;
+}
+
+header#cabecalho img#icone{
+	position: absolute;
+	left: 850px;
+	top: 75px;
+}
+
+p{
+	text-align: justify;
+	text-indent: 50px;
+}
+
+a{
+	text-decoration: none;
+	color: #606060;
+}
+
+a:hover{
+	text-decoration: underline;
+}
+
+a#tabela{
+	text-decoration: none;
+}
+
+/*	Formatação de imagens com legenda*/
+figure.fotoLegenda {
+	position: relative;	/*Coloca a imagem em posição relativa a configuração HMTL*/
+	border: 8px solid white;
+	box-shadow: 2px 2px 4px rgba(0,0,0,.4);
+}
+
+figure.fotoLegenda img{
+	width: 100%;		/*Altura*/
+	height: 100%;		/*Largura*/
+}
+
+figure.fotoLegenda figcaption {
+	opacity: 0;		/* Invisivel até passar o mouse por cima */
+	position: absolute;	/*Posição absoluta dentro do pai que é relativo*/
+	top: 0px;		/*Posição 0 dentro do pai*/
+	background-color: rgba(0,0,0,.4);
+	color: white;
+	width: 100%;
+	height: 100%;
+	padding: 10px;	/*Espaçãmento interno */
+	box-sizing: border-box;
+	transition: opacity 1s;	/*Tempo de transição da opacidade*/
+}
+
+figure.fotoLegenda:hover figcaption{
+	opacity: 1;		/*Torna legenda visivel passando mouse por cima*/
+}
+
+/* Formatação menu iterativo*/
+nav#menu ul {
+	position: absolute;
+	top: -20px;
+	left: 450px;
+	list-style: none;
+	text-transform: uppercase;
+}
+
+nav#menu li{
+	display: inline-block;
+	background-color: #dddddd;
+	padding: 5px;
+	margin: 2px;
+	transition: background-color 1s;
+	border-radius: 4px;
+}
+nav#menu li:hover{
+	background-color: #606060;
+}
+
+nav#menu a{
+	text-decoration: none;
+	font-family: arial;
+}
+
+nav#menu a:hover{
+	text-decoration: underline;
+	color: white;
+}
+
+nav#menu h1{
+	display: none;
+}
+
+section#corpo {
+	display: block;
+	width: 500px;
+	float: left;
+	border-right: 1px solid #606060;
+	padding: 10px;
+}
+
+article#principal h2{
+	background-color: #dddddd;
+	color: #606060;
+	font-size: 13pt;
+	padding: 5px 10px 5px 10px;
+	margin: 10px 0px 10px 0px;
+	box-shadow: 2px 2px 3px rgba(0,0,0,.5);
+}
+
+header#cabArtigo h1{
+	font-size: 20pt;
+	font-family: fonteLogo, sans-serif;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	color: #606060;
+}
+
+header#cabArtigo h2{
+	font-size: 13pt;
+	color: #cecece;
+	background: #ffffff;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-right: 0px;
+	padding: 0px;
+}
+
+header#cabArtigo h2.scx{
+	box-shadow: none;
+}
+
+header#cabArtigo h3{
+	font-size: 11pt;
+	color: #606060;
+	margin-top: 0px;
+}
+
+.direita{
+	text-align: right;
+}
+
+table#especific {
+	border-spacing: 0px;
+	border: 1px solid #606060;
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow: 3px 3px 3px rgba(0,0,0,.5);
+}
+
+table#especific td{
+	border: 1px solid #606060;
+	padding: 10px;
+	text-align: middle;
+}
+
+table#especific td.ce{
+	color: #ffffff;
+	background: #606060;
+	vertical-align: top;
+	text-align: right;
+	font-weight: bold;
+}
+
+table#especific td.cd{
+	background: #dddddd;
+	text-align: left;
+}
+
+table#especific caption{
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 13pt;
+	font-weight: bolder;
+	color: #888888;
+}
+
+table#especific caption span{
+	display: block;
+	font-size: 8pt;
+	float: right;
+	margin-top: 10px;
+	color: #000000;
+}
+
+aside#lateral {
+	display: block;
+	width: 390px;
+	float: right;
+	background-color: #dddddd;
+	padding: 10px;
+	margin-top:15px;
+	box-shadow: 3px 3px 3px rgba(0,0,0,.5);
+	border-radius: 10px;
+}
+
+aside#lateral h1{
+	font-size: 20pt;
+	font-family: fonteLogo, sans-serif;
+	color: #606060;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	
+}
+
+aside#lateral h2{
+	background-color: #606060;
+	color: #ffffff;
+	font-size: 13pt;
+	padding: 5px 0px 5px 10px;
+	border-radius: 4px;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.4);
+}
+
+footer#rodape {
+	display: block;
+	clear: both;
+	border-top: 1px solid #606060;
+}
+
+footer#rodape p{
+	text-align: center;
+}

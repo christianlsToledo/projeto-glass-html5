@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8"/>
+	<title>Tudo sobre Google Glass </title>
+	<link rel="stylesheet" type="text/css" href="_css/estilo.css"/>
+	<link rel="stylesheet" type="text/css" href="_css/form.css"/>
+	<script language="javascript" src="_javascript/funcoes.js"></script>
+	<script>
+		function calcTot(){
+			var qtd = parseInt(document.getElementById('iQuant').value);
+			tot = qtd*1500;
+			document.getElementById('iTot').value = tot;
+		}
+	</script>
+	<script>
+		function showCards(){
+			if(document.getElementById('iPed').checked){
+				document.getElementById('inform').style.display="none";
+				document.getElementById('usuario').style.display="block";
+				document.getElementById('endereco').style.display="block";
+				document.getElementById('mensagem').style.display="block";
+				document.getElementById('pedido').style.display="block";
+			}else{
+				document.getElementById('inform').style.display="block";
+				document.getElementById('usuario').style.display="none";
+				document.getElementById('endereco').style.display="none";
+				document.getElementById('mensagem').style.display="none";
+				document.getElementById('pedido').style.display="none";
+			}
+		}
+	</script>
+</head>
+<body>
+	<div id="interface">
+		<header id="cabecalho">
+				<hgroupe>
+					<h1>Google Glass</h1>
+					<h2>A revolução do Google está chegando</h2>
+				</hgroupe>
+				<img id="icone" src="_imagens/contato.png"/>
+				<nav id="menu">
+					<h1>Menu Principal</h1>
+					<ul type="disc">	<!--   Menu -->
+						<li onmousemove="mudaIcone('home')" onmouseout="mudaIcone('contato')">
+						<a href="index.html">Home</a></li>
+						<li onmousemove="mudaIcone('especificacoes')" onmouseout="mudaIcone('contato')">
+						<a href="specs.html">Especificações</a></li>
+						<li onmousemove="mudaIcone('fotos')" onmouseout="mudaIcone('contato')">
+						<a href="fotos.html">Fotos</a></li>
+						<li onmousemove="mudaIcone('multimidia')" onmouseout="mudaIcone('contato')">
+						<a href="multimidia.html">Multimídia</a></li>
+						<li onmousemove="mudaIcone('contato')" onmouseout="mudaIcone('contato')">
+						<a href="fale-conosco.html">Fale conosco</a></li>
+					</ul>	
+				</nav>
+		</header>
+				<!-- -------------------------- Fim Cabeçalho -------------------------------------- -->
+				<header id="cabArtigo">
+					<hgroup>
+						<h3>Fale conosco > Contato</h3>
+						<h1>Formulário de contato</h1>
+						<h2 class="scx">por Christian de Toledo</h2>
+						<h3 class="direita">Atualizado em 20/Janeiro/2021</h3>	
+					</hgroup>
+				</header>	
+		<!-- ------------------------------------- Recorte Corpo cabecalho ------------------------------------ -->		
+<form method="post" id="fContato" action="confirmacao-dados.php">
+	<fieldset id="inform"><legend>Declaração de interesse</legend>
+		<p>Caso tenha interesse você pode se cadastrar e assim que começarmos a pré venda um de nossos vendedores entrarão em contato para todos os esclarecimentos e fechamento de sua mais nova aquisição.</p>
+	</fieldset>
+	<p><input type="checkbox" name="nPed" id="iPed" onclick="showCards()"/>
+	<label for="iPed">Gostaria de adquirir um Google Glass quando disponível</label></p>
+
+	<fieldset id="usuario"><legend><label for="iNome">Identificação do Usuário</label></legend>
+		<p><label for="iNome">Nome:
+		</label><input type="text" name="nNome" id="iNome" size="20" maxlength="30" placeholder="Nome completo" required/></p>
+		<p><label for="iSenha">Senha:
+		</label><input type="password" name="nSenha" id="iSenha" size="8" maxlength="8" placeholder="8 Digitos" required/></p>
+		<p><label for="iMail">E-mail:
+		</label><input type="email" name="nMail" id="iMail" size="20" maxlength="40" placeholder="seuemail@exemplo.com.br"/></p>
+		<fieldset id="sexo"><legend>Sexo:</legend>
+			<input type="radio" name="nSexo" id="iMasc" value="Masculino" checked/><label for="iMasc">Masculino</label><br/>
+			<input type="radio" name="nSexo" id="iFem" value="Feminino"/><label for="iFem">Feminino</label>
+		</fieldset>
+		<p>Data de Nascimento: <input type="date" name="nNasc" id="iNasc"/></p>
+	</fieldset>
+
+	<fieldset id="endereco"><legend>Endereço do Usuário</legend>
+		<p><label for="iRua">Logradouro:</label>
+		<input type="text" name="nRua" id="iRua" size="20" maxlength="40" placeholder="Rua, Av, Trav, ..."/></p>
+		<p><label for="iNum">Número:</label>
+		<input type="number" name="nNum" id="iNum" min="0" max="99999"/></p>
+		<p><label for="iEst">Estado:</label>
+			<select name="nEst" id="iEst">
+				<optgroup label="Região Sudeste">
+					<option>São Paulo</option>
+					<option>Rio de Janeiro</option>
+					<option>Minas Gerais</option>
+				</optgroup>
+				<optgroup label="Região Sul">
+					<option>Paraná</option>
+					<option selected>Santa Catarina</option>
+					<option>Rio Grande do Sul</option>
+				</optgroup>
+			</select>
+		</p>
+		<p><label for="iCid">Cidade:</label>
+		<input type="text" name="nCid" id="iCid" size="20" maxlength="30" placeholder="Sua Cidade" list="cidades"/>
+			<datalist id="cidades">
+				<option value="São Paulo"></option>
+				<option value="Taboão da Serra"></option>
+				<option value="Nova Iguaçu"></option>
+				<option value="Niterói"></option>
+				<option value="São Gonçalo"></option>
+				<option value="Estrema"></option>
+				<option value="Curitiba"></option>
+				<option value="Guarulhos"></option>
+			</datalist>
+		</p>
+	</fieldset>
+
+	<fieldset id="mensagem"><legend><label for="iMsg">Mensagem do Usuário</label></legend>
+		<p><label for="iUrg">Grau de Urgência:</label> 
+		Min <input type="range" name="nUrg" id="iUrg" min="0" max="10" step="2"/> Max</p>
+		<p><label for="iMsg">Mensagem:</label>
+		<textarea name="nMsg" id="iMsg" cols="45" rows="5" placeholder="Deixe aqui sua mensagem..."/></textarea></p>
+	</fieldset>
+
+	<fieldset id="pedido"><legend>Quero um Google Glass</legend>
+		<p>Cor:<input type="color" name="nCor" id="iCor" value="#0000ff"/></p>
+		<p><label for="iQuant">Quantidade:</label>
+		<input type="number" name="nQuant" id="iQuant" min="0" max="5" value="0" oninput="calcTot()"/></p>
+		<p>Preço Total: R$ <input type="text" name="nTot" id="iTot" placeholder="Total a pagar" readonly/></p>
+		<p id="enviar"><input type="submit" name="nEnviar" id="iEnviar" value="Enviar"/></p>
+	</fieldset>
+</form>
+<!-- -------------------------- Roda pé Recorte --------------------------------- -->
+		<footer id="rodape">
+			<nav id="link">	
+				<p>Copyright 2021 - by Christian de Toledo &copy; <br/>
+				<a href="https://www.facebook.com/christian.louzadodossantosdetoledo" target="blanc">Facebook</a> | 
+				<a href="https://wa.me/message/TDYGTHAI6Y7TD1" target="blanc">WhatsApp</a></p>
+			</nav>	
+		</footer>
+	</div>
+</body>
+</html>
